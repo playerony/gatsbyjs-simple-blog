@@ -6,6 +6,7 @@
   "scripts": {
     "build": "gatsby build",
     "clean": "gatsby clean",
+    "commitlint": "commitlint -- --from=main",
     "develop": "gatsby develop",
     "format": "prettier --write .",
     "format:check": "prettier --check \"**/*\"",
