@@ -1,21 +1,21 @@
 {
+  "private": true,
   "name": "gatsbyjs-simple-blog",
   "version": "1.0.0",
-  "private": true,
   "description": "GatsbyJS simple blog",
-  "keywords": [
-    "gatsby"
-  ],
   "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
     "build": "gatsby build",
-    "serve": "gatsby serve",
     "clean": "gatsby clean",
+    "develop": "gatsby develop",
+    "format": "prettier --write .",
+    "format:check": "prettier --check \"**/*\"",
     "gcb": "bash ./scripts/git-create-branch.sh",
     "gcmwp": "bash ./scripts/git-checkout-main-with-pull.sh",
     "gpc": "bash ./scripts/git-push-changes.sh",
-    "reinstall-node-modules": "bash ./scripts/reinstall-node-modules.sh"
+    "prepare": "husky install",
+    "reinstall-node-modules": "bash ./scripts/reinstall-node-modules.sh",
+    "serve": "gatsby serve",
+    "start": "gatsby develop"
   },
   "dependencies": {
     "@emotion/react": "^11.4.1",
@@ -32,13 +32,24 @@
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0"
   },
-  "volta": {
-    "node": "14.17.6",
-    "yarn": "1.22.11"
-  },
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
-    "husky": "^7.0.2"
+    "husky": "^7.0.2",
+    "lint-staged": "^11.1.2",
+    "prettier": "^2.3.2",
+    "prettier-package-json": "^2.6.0"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "volta": {
+    "node": "14.17.6",
+    "yarn": "1.22.11"
   }
 }
