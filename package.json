@@ -5,11 +5,12 @@
   "description": "GatsbyJS simple blog",
   "scripts": {
     "build": "gatsby build",
+    "check": "yarn format:check && yarn lint && yarn commitlint && yarn build",
     "clean": "gatsby clean",
     "commitlint": "commitlint -- --from=main",
     "develop": "gatsby develop",
     "format": "prettier --write .",
-    "format:check": "prettier --check \"**/*\"",
+    "format:check": "prettier --check .",
     "gcb": "bash ./scripts/git-create-branch.sh",
     "gcmwp": "bash ./scripts/git-checkout-main-with-pull.sh",
     "gpc": "bash ./scripts/git-push-changes.sh",
