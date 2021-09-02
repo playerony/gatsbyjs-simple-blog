@@ -2,8 +2,10 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { css, Global } from '@emotion/react';
 
+import Header from './header';
+
 const StyledMain = styled.main`
-  width: 550px;
+  width: 750px;
   max-width: 80vw;
   margin: 2rem auto 4rem;
 `;
@@ -58,7 +60,7 @@ const Layout = ({ children }) => (
         }
       `}
     />
-    <header></header>
+    <Header />
     <StyledMain>{children}</StyledMain>
   </>
 );
