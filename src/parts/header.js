@@ -38,10 +38,10 @@ const Header = () => (
       GatsbyJS simple blog
     </StyledNavLink>
     <StyledNav>
-      <StyledNavLink activeClassName="current-page" to="/">
+      <StyledNavLink to="/" activeClassName="current-page">
         Home
       </StyledNavLink>
-      <StyledNavLink activeClassName="current-page" to="/about">
+      <StyledNavLink to="/about" activeClassName="current-page">
         About
       </StyledNavLink>
     </StyledNav>
