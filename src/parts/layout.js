@@ -34,7 +34,7 @@ const Layout = ({ children }) => {
             margin: 0;
             color: #bbb5b5;
             line-height: 1.4;
-            font-size: 1.3em;
+            font-size: 1.1em;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
               sans-serif;
           }
