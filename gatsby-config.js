@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'GatsbyJS simple blog',
+    description: 'GatsbyJS simple blog',
   },
   plugins: [
     'gatsby-plugin-emotion',
