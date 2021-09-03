@@ -6,9 +6,14 @@ const query = graphql`
       nodes {
         excerpt
         frontmatter {
+          author
           slug
           title
-          author
+          image {
+            childrenImageSharp {
+              gatsbyImageData(width: 200, height: 200)
+            }
+          }
         }
       }
     }
@@ -22,6 +27,7 @@ const usePosts = () => {
     excerpt: _post.excerpt,
     slug: _post.frontmatter.slug,
     title: _post.frontmatter.title,
+    image: _post.frontmatter.image,
     author: _post.frontmatter.author,
   }));
 };
